@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bikeshop</title>
+    <title>Bikeshop Bottrop</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,20 @@
   </head>
 
   <body>
+
+  	<nav>
+  		<ul>
+    		<li>Home</li>
+    		<li>About</li>
+    		<li>Contact</li>
+  		</ul>
+	</nav>
+
     <%= yield %>
+
+    <footer>
+  		&copy; 2016 Bike Bottrop
+	</footer>
+
   </body>
 </html>
