@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+My name is Daniel and this is my first Ruby project.
 
 Things you may want to cover:
 
