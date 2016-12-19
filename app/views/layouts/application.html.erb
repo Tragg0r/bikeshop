@@ -2,25 +2,38 @@
 <html>
   <head>
     <title>Bikeshop Bottrop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
   <body>
 
-  	<nav>
-  		<ul>
-    		<li>Home</li>
-    		<li>About</li>
-    		<li>Contact</li>
-  		</ul>
-	</nav>
+  <!-- start navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="projectName navbar-brand">
+            <a href="#home-container">Bikeshop Bottrop</a>
+          </div> <!--end projectName -->
+        </div><!--end navbar-header -->
+        <div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#home-container">Home</a></li>
+            <li><a href="#about-container">About</a></li>
+            <li><a href="#contact-container">Contact</a></li>
+          </ul>
+        </div><!--end div-->
+      </div><!--end navbar container-->
+    </nav><!-- end navbar -->
 
     <%= yield %>
 
-    <footer>
+    <footer class="footer">
   		&copy; 2016 Bike Bottrop
 	</footer>
 
