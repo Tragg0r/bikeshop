@@ -11,7 +11,7 @@ p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  margin: 33px;
+  margin: 25px 0;
 }
 
 pre {
@@ -27,9 +27,13 @@ a {
     color: #666;
   }
 
+  &:link {
+    text-decoration: none;
+  }
+
   &:hover {
     color: #fff;
-    background-color: #000;
+    background-color: #34495e;
   }
 }
 
