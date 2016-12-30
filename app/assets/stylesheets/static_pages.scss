@@ -23,8 +23,10 @@ h1,h2,h3,h4 {
     text-transform: uppercase;
 }
 
-.projectName a {
+.projectName a, hover {
     letter-spacing: 0.08em;
+    color: #9d9d9d;
+    background-color: #000;
 }
 
 /**** Footer ****/
