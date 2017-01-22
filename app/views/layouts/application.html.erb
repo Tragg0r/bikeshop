@@ -38,9 +38,9 @@
           <ul class="nav navbar-nav navbar-right">
             <li>
               <% if user_signed_in? %>
-                <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-              <% else %>
-                <%= link_to('Login', new_user_session_path) %>
+                <button type="button" class="btn btn-default navbar-btn"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></button>
+                <% else %>
+                <button type="button" class="btn btn-default navbar-btn"><%= link_to('Login', new_user_session_path) %></button>
               <% end %>
             </li>
             <li><%= link_to 'Home', "/static_pages/index" %></li>
