@@ -1,0 +1,49 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-sign {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.form-control {
+	padding: 10px;
+}
+
+.email-field {
+	margin-bottom: 0;
+}
+
+#inputEmail {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#inputPassword {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+#inputPassword-1 {
+	margin-bottom: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.checkbox {
+	position: relative;
+	display: block;
+	margin-top: 10px;
+}
+
+.checkbox label {
+	padding-left: 20px;
+}
+
+#user_remember_me {
+	margin-left: 0;
+}
