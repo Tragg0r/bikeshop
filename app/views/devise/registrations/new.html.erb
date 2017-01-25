@@ -7,7 +7,7 @@
 
       <div class="email-field">
         <%= f.label :email, class: "sr-only" %><br />
-        <%= f.email_field :email, id: "inputEmail", class: "form-control", placeholder: "Email address" %><br />
+        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email address" %><br />
       </div>
 
       <div class="password-field">
@@ -19,8 +19,8 @@
       </div>
 
       <div class="password-field">
-        <%= f.label :password_confirmation, class: "sr-only" %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off", id: "inputPassword", class: "form-control", placeholder: "Password confirmation" %>
+        <%= f.label :password_confirmation, class: "sr-only" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", id: "inputPassword", class: "form-control form-border", placeholder: "Password confirmation" %>
       </div>
 
       <div class="actions">
