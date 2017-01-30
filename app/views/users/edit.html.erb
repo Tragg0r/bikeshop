@@ -1,16 +1,16 @@
 <div class="container">
 	<div class="row">
-   		<div class="col-xs-12 col-md-6">
-			<h1>Editing User</h1>
+   		<div class="col-xs-12 col-md-12">
+			<h1>Editing User Information</h1>
 
 			<%= render 'form', user: @user %>
 
+		</div> <!-- /col -->
+			
+		<div class="col-xs-12 col-md-12">
 			<%= link_to 'Show', @user %> |
 			<%= link_to 'Back', users_path %>
-		</div> <!-- /col -->
-
-    	<div class="col-xs-12 col-md-6">
-    		<%= render 'devise/registrations/edit', user: @user %>
-    	</div><!-- /col -->
+		</div>
+		
   	</div> <!-- /row -->
 </div> <!-- /container -->
