@@ -53,17 +53,17 @@
         </div><!--end navbar-header -->
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li>
+            <li><%= link_to 'Home', "/static_pages/index" %></li>
+            <li><%= link_to 'Products', products_url %></li>
+            <li><%= link_to 'About', "/static_pages/about" %></li>
+            <li><%= link_to 'Contact', "/static_pages/contact" %></li>
+            <li class="log_button">
               <% if user_signed_in? %>
                 <button type="button" class="btn btn-default navbar-btn"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></button>
                 <% else %>
                 <button type="button" class="btn btn-default navbar-btn"><%= link_to('Login', new_user_session_path) %></button>
               <% end %>
             </li>
-            <li><%= link_to 'Home', "/static_pages/index" %></li>
-            <li><%= link_to 'Products', products_url %></li>
-            <li><%= link_to 'About', "/static_pages/about" %></li>
-            <li><%= link_to 'Contact', "/static_pages/contact" %></li>
           </ul>
           <%= form_tag("/products", class: "navbar-form", method: "get") do %>
           <div class="form-group">
