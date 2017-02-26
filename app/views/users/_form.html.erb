@@ -13,15 +13,38 @@
 
   <div class="field">
     <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, class: "form-control" %><br />
+  </div>
+
+  <div>
+    <h1>Editing User Registration</h1>
+  </div>
+
+  <div class="field">
+  <%= f.label :email %>
+  <%= f.email_field :email, autofocus: true, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %> 
+    <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Leave blank if you don't want to change it" %>
+    <% if @minimum_password_length %>
+      <em>( <%= @minimum_password_length %> characters minimum )</em>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %><br />
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit(class: "btn btn-success") %> <%= link_to "Delete User", registration_path(User), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %>
   </div>
+
 <% end %>

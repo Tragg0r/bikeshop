@@ -3,5 +3,67 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .product-height {
-	height: 600px;
+	height: 100%;
 }
+
+.div-color {
+	background-color: #f0f0f0;
+	margin: 1px;
+	padding: 0 15px;
+}
+
+.h4-title {
+	margin: 0 20px
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.p-margin {
+	margin: 33px 33px 0 0;
+}
+
+.new_comment {
+	margin-top: 15px;
+}
+
+.apple_pagination {
+  background: #f1f1f1;
+  text-align: center;
+  padding: 15px;
+  margin: 1px;
+  cursor: default; 
+}
+
+.apple_pagination a, .apple_pagination span {
+    padding: 0.2em 0.3em; 
+}
+
+  .apple_pagination .disabled {
+    color: #aaaaaa; 
+}
+
+.apple_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background-color: #bebebe;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; 
+}
+
+.apple_pagination a {
+    text-decoration: none;
+    color: black; 
+}
+
+.apple_pagination a:hover, .apple_pagination a:focus {
+      text-decoration: underline; 
+}
+
