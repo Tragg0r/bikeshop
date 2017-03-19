@@ -3,8 +3,8 @@ require 'rails_helper'
 describe UsersController, :type => :controller do
   before do
 
-    @user = User.create!(:user, first_name: "Daniel", last_name: "Schmidt", email: "daniel.schmidt86@outlook.com", password: "123456")
-    @user2 = User.create!(:user, first_name: "Michi", last_name: "Noob", email: "noob@example.com", password: "123456")
+    @user = User.create!(first_name: "Daniel", last_name: "Schmidt", email: "daniel.schmidt86@outlook.com", password: "123456")
+    @user2 = User.create!(first_name: "Michi", last_name: "Noob", email: "noob@example.com", password: "123456")
 
   end
 
@@ -45,8 +45,8 @@ describe UsersController, :type => :controller do
 
          get :show, id: @user.id
 
-         expect(response).to have_http_status(302)
-         expect(response).to redirect_to(root_path)
+         expect(response).to have_http_status(200)
+         expect(assigns(:user)).to eq @user
        end
      end
   end
