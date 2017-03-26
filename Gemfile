@@ -63,3 +63,6 @@ gem 'will_paginate', '~> 3.1.1'
 
 #Gemfile for controller testing
 gem 'rails-controller-testing'
+
+#Gemfile for Stripe
+gem 'stripe'

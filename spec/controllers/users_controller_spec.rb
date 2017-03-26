@@ -4,9 +4,8 @@ describe UsersController, :type => :controller do
   before do
 
     #@user = User.create!(first_name: "Daniel", last_name: "Schmidt", email: "daniel.schmidt86@outlook.com", password: "123456")
-    #@user2 = User.create!(first_name: "Michi", last_name: "Noob", email: "noob@example.com", password: "123456")
     @user = FactoryGirl.create(:user)
-
+    @user2 = FactoryGirl.create(:user)
 
   end
 
@@ -39,16 +38,15 @@ describe UsersController, :type => :controller do
 
        before do
 
-         sign_in @user
+         sign_in @user2
 
        end
 
        it "to see other users details" do
 
-         get :show, id: @user.id
+         get :edit, id: @user.id
 
-         expect(response).to have_http_status(403)
-         expect(assigns(:user)).to eq @user
+         expect(response).to have_http_status(302)
        end
      end
   end

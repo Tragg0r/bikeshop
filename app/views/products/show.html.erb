@@ -15,8 +15,8 @@
         </div>
 
         <div class="col-xs-12 col-md-3">
-          <p class="p-margin"><strong>Average Rating:</strong></p> 
-            <div class="rated" data-score="<%= @product.average_rating %>"></div> 
+          <p class="p-margin"><strong>Average Rating:</strong></p>
+            <div class="rated" data-score="<%= @product.average_rating %>"></div>
          </div>
 
         <div class="col-xs-12 col-md-3">
@@ -31,6 +31,9 @@
             <strong>Price:</strong>
             <button type="button" class="btn btn-success btn-xs"><%= @product.price %><span class="glyphicon glyphicon-euro" aria-hidden="true"></span></button>
           </p>
+            <%= form_tag "/payments/create" do %>
+              <%= render partial: "shared/stripe_checkout_button" %>
+            <% end %>
         </div>
 
         <div class="col-xs-12 col-md-12 div-color">
@@ -76,10 +79,10 @@
         <div class="col-xs-12 col-md-12 new_comment">
           <%= render partial: "new_comment" %>
         </div>
-        
+
             <%= link_to 'Edit', edit_product_path(@product) %> |
             <%= link_to 'Back', products_path %>
-          
+
       </div>
   </div>
 </div>
