@@ -47,7 +47,7 @@ describe UsersController, :type => :controller do
 
          get :show, id: @user.id
 
-         expect(response).to have_http_status(200)
+         expect(response).to have_http_status(403)
          expect(assigns(:user)).to eq @user
        end
      end
