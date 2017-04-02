@@ -32,7 +32,7 @@
             <button type="button" class="btn btn-success btn-xs"><%= @product.price %><span class="glyphicon glyphicon-euro" aria-hidden="true"></span></button>
           </p>
             <%= form_tag "/payments/create" do %>
-              <%= render partial: "shared/stripe_checkout_button" %>
+              <%= render partial: "shared/stripe_checkout_button", class: "stripeButton" %>
             <% end %>
         </div>
 

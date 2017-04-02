@@ -13,42 +13,42 @@ describe UsersController, :type => :controller do
      context 'User is logged in' do
        before do
          sign_in @user
-       end
+  end
 
-       it "loads correct user details" do
+  it "loads correct user details" do
 
-        get :show, params: {id: @user.id}
+    get :show, params: {id: @user.id}
 
-        expect(response).to have_http_status(200)
-        expect(assigns(:user)).to eq @user
+      expect(response).to have_http_status(200)
+      expect(assigns(:user)).to eq @user
 
-       end
-     end
+    end
+  end
 
-     context 'No user is logged in' do
-       it 'redirects to login' do
+  context 'No user is logged in' do
+    it 'redirects to login' do
 
-         get :show, id: @user.id
-         expect(response).to redirect_to(new_user_session_path)
+      get :show, id: @user.id
+        expect(response).to redirect_to(new_user_session_path)
 
-       end
-     end
+    end
+  end
 
-     context "Current User is not allowed" do
+  context "Current User is not allowed" do
 
-       before do
+    before do
 
-         sign_in @user2
+      sign_in @user2
 
-       end
+    end
 
-       it "to see other users details" do
+    it "to see other users details" do
 
-         get :edit, id: @user.id
+      get :edit, id: @user.id
 
-         expect(response).to have_http_status(302)
-       end
-     end
+        expect(response).to have_http_status(302)
+      end
+    end
   end
 
 end
