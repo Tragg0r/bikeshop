@@ -68,10 +68,10 @@ gem 'rails-controller-testing'
 gem 'stripe'
 
 # Brakeman
-gem cert --add <(curl -Ls https://raw.github.com/presidentbeef/brakeman/master/brakeman-public_cert.pem)
+#gem cert --add <(curl -Ls https://raw.github.com/presidentbeef/brakeman/master/brakeman-public_cert.pem)
 
 # ruby_parser, etc.
-gem cert --add <(curl -Ls http://www.zenspider.com/~ryan/gem-public_cert.pem)
+#gem cert --add <(curl -Ls http://www.zenspider.com/~ryan/gem-public_cert.pem)
 
 # multijson
-gem cert --add <(curl -Ls https://raw.githubusercontent.com/intridea/multi_json/master/certs/rwz.pem)
+#gem cert --add <(curl -Ls https://raw.githubusercontent.com/intridea/multi_json/master/certs/rwz.pem)
