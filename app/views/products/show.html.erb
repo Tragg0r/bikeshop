@@ -4,7 +4,7 @@
       <div class="thumbnail">
         <p>
           <% cache @product do %>
-            <%= image_tag(@product.image_url, class: "img-responsive") %>
+            <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %>
           <% end %>
         </p>
 
@@ -32,7 +32,7 @@
             <button type="button" class="btn btn-success btn-xs"><%= @product.price %><span class="glyphicon glyphicon-euro" aria-hidden="true"></span></button>
           </p>
             <%= form_tag "/payments/create" do %>
-              <%= render partial: "shared/stripe_checkout_button", class: "stripeButton" %>
+              <%= render partial: "shared/stripe_checkout_button" %>
               <%= hidden_field_tag :product_id, @product.id %>
             <% end %>
         </div>
