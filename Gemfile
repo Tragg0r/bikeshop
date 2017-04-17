@@ -69,3 +69,6 @@ gem 'stripe'
 
 #Gemfile for Brakeman
 gem "brakeman", :require => false
+
+#Gemfile for Dalli
+gem 'dalli'
