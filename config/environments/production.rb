@@ -83,6 +83,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.web_socket_server_url = "wss://bikeshop-bottrop.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://bikeshop-bottrop.herokuapp.com', 'http://bikeshop-bottrop.herokuapp.com']
   end
 
   config.cache_store = :dalli_store,

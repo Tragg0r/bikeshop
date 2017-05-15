@@ -1,3 +1,17 @@
 // Place all the styles related to the payments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//Styling for the stripe-button
+.stripe-button-el span {
+background: green !important;
+color: white !important;
+}
+
+.stripe-button-el {
+margin-left: 33px;
+}
+
+.price-margin {
+  margin: 33px 33px 4px 33px ;
+}
