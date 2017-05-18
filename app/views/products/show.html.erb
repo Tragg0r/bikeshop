@@ -68,7 +68,7 @@
 
         <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!
         </div>
-        
+
         <div class="col-xs-12 col-md-12 div-color">
           <p>
             <strong class="underline">Comments:</strong>
@@ -86,6 +86,13 @@
 
             <%= link_to 'Edit', edit_product_path(@product) %> |
             <%= link_to 'Back', products_path %>
+
+            <h6>
+              Views:
+              <span class="badge">
+                <%= @product.views %>
+              </span>
+            </h6>
 
       </div>
   </div>

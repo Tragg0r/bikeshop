@@ -77,4 +77,9 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :average_rating, :description, :color, :price, :image_url)
     end
+
+    def show
+        # assuming you load the @product in prepare_product
+        @product.viewed!
+    end 
 end
