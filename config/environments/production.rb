@@ -86,7 +86,6 @@ Rails.application.configure do
 
   config.web_socket_server_url = "wss://bikeshop-bottrop.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['https://bikeshop-bottrop.herokuapp.com', 'http://bikeshop-bottrop.herokuapp.com']
-  end
 
   config.cache_store = :dalli_store,
                     (ENV["MEMCACHIER_SERVERS"] || "").split(","),
@@ -97,3 +96,4 @@ Rails.application.configure do
                      :socket_failure_delay => 0.2,
                      :down_retry_delay => 60
                     }
+end
